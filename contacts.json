@@ -1,0 +1,965 @@
+{
+    "COMMENTS" : "**IMPORTANT README** : THIS IS THE MAIN BACKEND FILE FOR THE CONTACTS PAGE/OTHER LINKED CONTACTS PAGES",
+    "COMMENTS" : "ANY WRONG CHANGE WILL MAKE ALL THE FUNCTIONALITY IN THE LINKED PAGES TO STOP WORKING.(SEE BELOW FOR DEPENDENCIES)",
+    "COMMENTS" : "After any change verify if this file is a valid JSON at http://jsonlint.com/",
+    "COMMENTS" : "",
+    "COMMENTS" : "LIST OF DEPENDENCIES--PAGES NEEDED TO BE TESTED AFTER EACH CHANGE",
+    "COMMENTS" : "A) /library/about/contacts/contacts.php",
+    "COMMENTS" : "B) /library/about/contacts/contacts.php?liasonsonly=1",
+    "COMMENTS" : "C) /library/about/contacts/contacts.php?liasonsonly=1&eonly=1",
+    "COMMENTS" : "D) /library/askalib/",
+    "COMMENTS" : "Below is the description of all the fields and what its role is:",
+    "COMMENTS" : "This JSON define the schema for a person. Every element in the 'contacts' array is a person. ",
+    "COMMENTS" : "1) depsupervisor -- Setting this field to 1 makes the person jump to the top in sorting for that department.",
+    "COMMENTS" : "2) schools -- This is a multipurpose field. It stores the school/associated subject details for most cases. But in certain exceptions where persons not associated with any school need to have some links beside their name, the school name should be left blank and the link name/link should be put in the subjects.",
+    "COMMENTS" : "3) exception -- setting this field will make a person appear in the exceptions list (C) and askalib (D)",
+    
+    
+    
+    "contacts" : [{
+        "fname" : "Linda",
+        "lname" : "Snow",
+        "email" : "snow@utdallas.edu",
+        "phone" : "972-883-2626",
+        "title" : "Head of Reference Services,<br/>Senior Librarian,<br/>Liaison to the School of Arts and Humanities",
+        "image" : "lindasnow.gif",
+        "department" : "Reference Services",
+        "depsupervisor" : 1,
+        "profile" : "http://libguides.utdallas.edu/profile/snow",
+        "schools" : [{
+            "school" : "School of Arts and Humanities",
+            "subjects" : [[
+            "Art and Architecture",
+            "http://libguides.utdallas.edu/art"
+            ], [
+            "Art and Technology",
+            "http://libguides.utdallas.edu/artandtech"
+            ], [
+            "Arts and Humanities",
+            "http://libguides.utdallas.edu/artsandhumanities"
+            ], [
+            "Film",
+            "http://libguides.utdallas.edu/content.php?pid=17974"
+            ], [
+            "Greek and Latin Classical Civilizations",
+            "http://libguides.utdallas.edu/content.php?pid=303805"
+            ], [
+            "History and Military Science",
+            "http://libguides.utdallas.edu/history"
+            ], [
+            "Literature and Language",
+            "http://libguides.utdallas.edu/literature"
+            ], [
+            "Music and Dance",
+            "http://libguides.utdallas.edu/music"
+            ], [
+            "Philosophy and Religion",
+            "http://libguides.utdallas.edu/philosophy_and_religion"
+            ], [
+            "Photography",
+            "http://libguides.utdallas.edu/content.php?pid=384461"
+            ], [
+            "Theater",
+            "http://libguides.utdallas.edu/theater"
+            ], [
+            "The Renaissance",
+            "http://libguides.utdallas.edu/content.php?pid=18730"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Kreg",
+        "lname" : "Walvoord",
+        "email" : "walvoord@utdallas.edu",
+        "phone" : "972-883-2919",
+        "title" : "Assistant Head of Reference Services,<br/>Senior Librarian,<br/>Liaison for Math and Chemistry",
+        "image" : "Kreg.png",
+        "department" : "Reference Services",
+        "profile" : "http://libguides.utdallas.edu/profile/walvoord",
+        "schools" : [{
+            "school" : "School of Interdisciplinary Studies",
+            "subjects" : [[
+            "Education",
+            "http://libguides.utdallas.edu/education"
+            ], [
+            "Gender Studies",
+            "http://libguides.utdallas.edu/content.php?pid=24769"
+            ], [
+            "Interdisciplinary Studies",
+            "http://libguides.utdallas.edu/content.php?pid=18999"
+            ], [
+            "Science and Mathematics Education",
+            "http://libguides.utdallas.edu/content.php?pid=17985"
+            ],[
+	     "Chemistry",
+            "http://libguides.utdallas.edu/chemistry"
+            ], [
+            "General Science",
+            "http://libguides.utdallas.edu/content.php?pid=117955"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Susan",
+        "lname" : "Kutchi",
+        "email" : "susan.kutchi@utdallas.edu",
+        "phone" : "972-883-2613",
+        "title" : "Senior Librarian, <br/>Liaison for BBS, Biology, Health and Medicine",
+        "image" : "SusanK.gif",
+        "department" : "Information Literacy Services",
+        "profile" : "http://libguides.utdallas.edu/profile/susie",
+        "schools" : [{
+            "school" : "School of Behavioral and Brain Sciences",
+            "subjects" : [[
+            "Audiology",
+            "http://libguides.utdallas.edu/audiology"
+            ], [
+            "Behavioral Brain Sciences",
+            "http://libguides.utdallas.edu/cat.php?cid=20261"
+            ], [
+ 		"Biology",
+            "http://libguides.utdallas.edu/cat.php?search_cat=Biology&mode=profile_search"
+            ],[
+            "Health Medicine",
+            "http://libguides.utdallas.edu/profile.php?uid=6310"
+            ], [
+            "Neuroscience",
+            "http://libguides.utdallas.edu/content.php?pid=37231"
+            ], [
+            "Psychology",
+            "http://libguides.utdallas.edu/content.php?pid=18656"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Wanda",
+        "lname" : "Tanghlyn",
+        "email" : "wxt120330@utdallas.edu",
+        "phone" : "972-883-3165",
+        "title" : "Callier Center Librarian, <br/>Senior Librarian",
+        "image" : "wandaT.png",
+        "department" : "Callier Center Library",
+        "profile" : "",
+        "schools" : [{
+            "school" : "School of Behavioral and Brain Sciences",
+            "subjects" : [[
+            "Audiology",
+            "http://libguides.utdallas.edu/cat.php?search_cat=Biology&mode=profile_search"
+            ], [
+            "Speech Pathology",
+            ""
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Matt",
+        "lname" : "Makowka",
+        "email" : "mattmm@utdallas.edu",
+        "phone" : "972-883-6773",
+        "title" : "Senior Librarian, <br/>Liaison for Engineering",
+        "image" : "MattM.jpg",
+        "department" : "Reference Services",
+        "profile" : "http://libguides.utdallas.edu/profile/mattmakowka",
+        "schools" : [{
+            "school" : "Erik Jonsson School of Engineering and Computer Science",
+            "subjects" : [[
+            "Advanced Software Architecture and Design",
+            "http://libguides.utdallas.edu/softarch"
+            ], [
+            "Game Studies",
+            "http://libguides.utdallas.edu/atec3353"
+            ], [
+            "Engineering",
+            "http://libguides.utdallas.edu/engineering"
+            ], [
+            "Materials Science",
+            "http://libguides.utdallas.edu/content.php?pid=42008"
+            ], [
+            "Mechanical Engineering",
+            "http://libguides.utdallas.edu/mechanical"
+            ], [
+            "Systems Engineering Architecture and Design",
+            "http://libguides.utdallas.edu/syseng"
+            ], [
+            "Telecommunications",
+            "http://libguides.utdallas.edu/telecommunications"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Carol",
+        "lname" : "Oshel",
+        "email" : "carol.oshel@utdallas.edu",
+        "phone" : "972-883-2627",
+        "title" : "Senior Librarian, <br/>Liaison for Computer Science",
+        "image" : "CarolO.jpg",
+        "department" : "Reference Services",
+        "profile" : "http://libguides.utdallas.edu/profile/Carol_Oshel",
+        "schools" : [{
+            "school" : "Erik Jonsson School of Engineering and Computer Science",
+            "subjects" : [[
+            "Biomedical Engineering",
+            "http://libguides.utdallas.edu/content.php?pid=17639"
+            ], [
+            "Computer Science",
+            "http://libguides.utdallas.edu/computerscience"
+            ], [
+            "Nanotechnology, Nanoscience, Nanomaterials",
+            "http://libguides.utdallas.edu/content.php?pid=109984"
+            ]]
+        }, {
+            "school" : "School of Natural Sciences and Mathematics",
+            "subjects" : [[
+            "Actuarial Science",
+            "http://libguides.utdallas.edu/content.php?pid=234556"
+            ],
+            [
+            "History of Medicine",
+            "http://libguides.utdallas.edu/content.php?pid=296690"
+            ],
+            [
+            "Physics",
+            ""
+            ],
+            [
+            "Space Science",
+            ""
+            ]
+						
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Stephanie",
+        "lname" : "Isham",
+        "email" : "sisham@utdallas.edu",
+        "phone" : "972-883-2629",
+        "title" : "Instruction Librarian",
+        "image" : "StephanieI.gif",
+ 	 "exception" : "1",
+        "department" : "Information Literacy Services",
+        "profile" : "http://libguides.utdallas.edu/profile/sisham",
+        "schools" : [{
+            "school" : "",
+            "subjects" : [[
+            "Library Instruction",
+            "http://www.utdallas.edu/library/services/instruction.html"
+            ]
+            ]
+		 }
+         ]
+     },{
+        "fname" : "Loreen",
+        "lname" : "Henry",
+        "email" : "loreen@utdallas.edu",
+        "phone" : "972-883-2126",
+        "title" : "Head of Information Literacy Services, <br/> Senior Librarian,<br/>Liaison to the School of Management",
+        "image" : "loreenH.gif",
+        "department" : "Information Literacy Services",
+        "depsupervisor" : 1,
+        "profile" : "http://libguides.utdallas.edu/profile.php?uid=6220",
+        "schools" : [{
+            "school" : "Naveen Jindal School of Management",
+            "subjects" : [[
+            "Accounting",
+            "http://libguides.utdallas.edu/content.php?pid=18636"
+            ], [
+            "Business Communications",
+            "http://libguides.utdallas.edu/BA3311"
+            ], [
+            "Business Plans and Proposals",
+            "http://libguides.utdallas.edu/BusinessPlans"
+            ], [
+            "Corporations Politics & Society",
+            "http://libguides.utdallas.edu/content.php?pid=38204"
+            ], [
+            "Entrepreneurship Resources",
+            "http://libguides.utdallas.edu/Entrepreneurship"
+            ], [
+            "Finance",
+            "http://libguides.utdallas.edu/finance"
+            ], [
+            "International Marketing",
+            "http://libguides.utdallas.edu/BA3374"
+            ], [
+            "Management",
+            "http://libguides.utdallas.edu/management"
+            ], [
+            "Organizational Behavior",
+            "http://libguides.utdallas.edu/organization"
+            ], [
+            "Public Communication",
+            "http://libguides.utdallas.edu/AMS3314"
+            ], [
+            "Strategic Management",
+            "http://libguides.utdallas.edu/BA4305"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Dr. Ellen",
+        "lname" : "Safley",
+        "email" : "safley@utdallas.edu",
+        "phone" : "972-883-2916",
+        "title" : "Dean of Libraries",
+        "image" : "EllenSafley.gif",
+        "department" : "Administration",
+        "depsupervisor" : 1,
+        "profile" : "",
+        "schools" : [{
+            "school" : "School of Economic, Political & Policy Sciences",
+            "subjects" : [[
+            "Criminology",
+            "http://libguides.utdallas.edu/content.php?pid=17672"
+            ], [
+            "Economics",
+            "http://libguides.utdallas.edu/content.php?pid=17783"
+            ], [
+            "Anthropology",
+            "http://libguides.utdallas.edu/content.php?pid=233528"
+            ], [
+            "Geographic Information Systems (GIS)",
+            ""
+            ], [
+            "Geography",
+            ""
+            ], [
+            "Law",
+            "http://libguides.utdallas.edu/law"
+            ], [
+            "Oceanography",
+            ""
+            ],[
+            "Public Affairs/Public Administration",
+            "http://libguides.utdallas.edu/publicaffairs"
+            ], [
+            "Political Science",
+            "http://libguides.utdallas.edu/politicalscience"
+            ], [
+            "Policy Studies",
+            ""
+            ], [
+            "Public Administration",
+            "http://libguides.utdallas.edu/publicaffairs"
+            ], [
+            "Sociology",
+            "http://libguides.utdallas.edu/content.php?pid=17845"
+            ], [
+            "Transportation",
+            ""
+            ], [
+            "Urban Studies",
+            ""
+            ]]
+        }
+        ]
+    }, {
+        "fname" : "Chris",
+        "lname" : "Edwards",
+        "email" : "cwe011000@utdallas.edu",
+        "phone" : "972-883-2614",
+        "title" : "Instruction Librarian,<br/>Liaison to the Veteran Services Center",
+        "exception" : "1",
+        "image" : "chrisedwards.gif",
+        "department" : "Information Literacy Services",
+        "profile" : "http://libguides.utdallas.edu/profile/chrisedwards",
+        "schools" : [{
+            "school" : "Veteran Services Center",
+            "subjects" : [[
+            "Library Instruction",
+            "http://www.utdallas.edu/library/services/instruction.html"
+            ], [
+            "Refworks",
+            "http://libguides.utdallas.edu/content.php?pid=96629"
+            ],[
+		"Services for Student Veterans",
+		"http://libguides.utdallas.edu/veterans"
+		]
+            ]
+        }]
+    }, {
+        "fname" : "Iryna",
+        "lname" : "Shevchuk",
+        "email" : "iryna.shevchuk@utdallas.edu",
+        "phone" : "972-883-2965",
+        "title" : "Web Services Librarian",
+        "image" : "Iryna.gif",
+        "department" : "Web Services",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Sanjan",
+        "lname" : "Rahman",
+        "email" : "sxr101120@utdallas.edu",
+        "phone" : "972-883-4902",
+        "title" : "Systems Manager,<br/>Computer Programmer III ",
+        "image" : "sanjan.gif",
+        "department" : "Library Systems",
+        "depsupervisor" : 1,
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Davin",
+        "lname" : "Pate",
+        "email" : "djp130330@utdallas.edu",
+        "phone" : "972-883-2908",
+        "title" : "Head of Acquisitions and Electronic Resources Team,<br/>Senior Librarian",
+        "image" : "PatDavin.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "depsupervisor" : 1,
+        "profile" : "",
+        "schools" : []
+    },	{
+        "fname" : "Mike",
+        "lname" : "Ramsey",
+        "email" : "mrr130230@utdallas.edu",
+        "phone" : "972-883-4510",
+        "title" : "Library Software Support Specialist III",
+        "image" : "MikeRamsey.gif",
+        "department" : "Software/Computers Support",
+	 "depsupervisor" : 1,
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Nadira",
+        "lname" : "Zakhidova",
+        "email" : "nadira@utdallas.edu",
+        "phone" : "972-883-2923",
+        "title" : "Web Specialist",
+        "image" : "nadira1.gif",
+        "department" : "Web Services",
+        "profile" : "",
+        "schools" : []
+    },  {
+        "fname" : "Ming Y",
+        "lname" : "Chen",
+        "email" : "mxc134930@utdallas.edu",
+        "phone" : "972-883-3534",
+        "title" : "Head of Metadata Services Team,<br/>Senior Librarian",
+        "image" : "chenming.gif",
+        "department" : "Metadata Services Team",
+        "depsupervisor" : 1,
+        "profile" : "",
+        "schools" : []
+    },	{
+        "fname" : "Debbie",
+        "lname" : "Montgomery",
+        "email" : "debmontg@utdallas.edu",
+        "phone" : "972-883-2963",
+        "title" : "Associate Library Director for Technical Services  and Assessment",
+        "image" : "DMsmall.gif",
+        "department" : "Administration",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Sue",
+        "lname" : " McInis",
+        "email" : "smcinis@utdallas.edu",
+        "phone" : "972-883-2628",
+        "title" : "Assistant Head of Metadata Services Team, <br/>Library Assistant IV",
+        "image" : "sue.gif",
+        "department" : "Metadata Services Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Sylvia",
+        "lname" : "Johnson",
+        "email" : "sylviaj@utdallas.edu",
+        "phone" : "972-883-2587",
+        "title" : "Course Reserves Coordinator,<br/>Administrative Assistant I",
+        "image" : "Sylvia.gif",
+        "department" : "Metadata Services Team",
+        "profile" : "",
+        "schools" : [{
+            "school" : "",
+            "subjects" : [[
+            "Course Reserves Website",
+            "http://www.utdallas.edu/library/services/reserves/index.html"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Una",
+        "lname" : "Scott",
+        "email" : "uxf120030@utdallas.edu",
+        "phone" : "972-883-2639",
+        "title" : "Copy Cataloger,<br/>Library Assistant III",
+        "image" : "Una.gif",
+        "department" : "Metadata Services Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Nahid",
+        "lname" : "Karimi",
+        "email" : "nahid.karimi@utdallas.edu",
+        "phone" : "972-883-2651",
+        "title" : "Copy Cataloger, <br/>Library Assistant III",
+        "image" : "nahid.gif",
+        "department" : "Metadata Services Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Misu",
+        "lname" : "Kim",
+        "email" : "mxk060100@utdallas.edu",
+        "phone" : "972-883-2563",
+        "title" : "Database Management Metadata Librarian",
+        "image" : "misu.gif",
+        "department" : "Metadata Services Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Marna",
+        "lname" : "Morland",
+        "email" : "mfm140030@utdallas.edu",
+        "phone" : "972-883-2636",
+        "title" : "Special Formats Metadata Librarian",
+        "image" : "Marna.gif",
+        "department" : "Metadata Services Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Erica",
+        "lname" : "Yeung",
+        "email" : "yeemei@utdallas.edu",
+        "phone" : "972-883-2658",
+        "title" : "Media & Special Collections Metadata Librarian",
+        "image" : "erica.gif",
+        "department" : "Metadata Services Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Linda",
+        "lname" : "DePhillips",
+        "email" : "linda@utdallas.edu",
+        "phone" : "972-883-2933",
+        "title" : "Statistical Analyst Librarian, <br/>Senior Librarian",
+        "image" : "LindaD.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Merry",
+        "lname" : "Trujillo",
+        "email" : "merry@utdallas.edu",
+        "phone" : "972-883-2996",
+        "title" : "Electronic Resources Coordinator, <br/>Library Assistant IV",
+        "image" : "merry1.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Brooke",
+        "lname" : "Johnson",
+        "email" : "bxh091000@utdallas.edu",
+        "phone" : "972-883-2560",
+        "title" : "Electronic Resources Assistant, <br/>Library Assistant III",
+        "image" : "brook.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Jady",
+        "lname" : "Neal",
+        "email" : "jady@utdallas.edu",
+        "phone" : "972-883-2673",
+        "title" : "Ordering Specialist, <br/>Library Assistant III",
+        "image" : "jady.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Julie",
+        "lname" : "Gaida",
+        "email" : "jag071000@utdallas.edu",
+        "phone" : "972-883-2961",
+        "title" : "Assistant Head of Acquisitions, <br/>Library Assistant IV",
+        "image" : "JulieGaida.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Nora",
+        "lname" : "Edwards",
+        "email" : "edwards@utdallas.edu",
+        "phone" : "972-883-2596",
+        "title" : "Periodicals/Binding Specialist, <br/>Library Assistant III",
+        "image" : "Nora.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Kendra",
+        "lname" : "Boyd",
+        "email" : "kkb101000@utdallas.edu",
+        "phone" : "972-883-2535",
+        "title" : "Ordering Specialist, <br/>Library Assistant III",
+        "image" : "kendra.gif",
+        "department" : "Acquisitions and Electronic Resources Team",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Jean",
+        "lname" : "Vik",
+        "email" : "jvik@utdallas.edu",
+        "phone" : "972-883-2623",
+        "title" : "Associate Library Director for Systems",
+        "image" : "Jean.gif",
+        "department" : "Administration",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Paul",
+        "lname" : "Oelkrug",
+        "email" : "oelkrug@utdallas.edu",
+        "phone" : "972-883-2553",
+        "title" : "Coordinator for Special Collections and Archives",
+        "image" : "paul1.gif",
+        "department" : "Special Collections and Archives",
+        "depsupervisor" : 1,
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Dr. Allen",
+        "lname" : "Clayton",
+        "email" : "aclayton@utdallas.edu",
+        "phone" : "972-883-2949",
+        "title" : "Digital Projects Coordinator, <br/>Senior Librarian",
+        "image" : "allenclayton.gif",
+        "department" : "Administration",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "DeAnn",
+        "lname" : "Hegi",
+        "email" : "deann.hegi@utdallas.edu",
+        "phone" : "972-883-2968",
+        "title" : "Administrative Services Officer II",
+        "image" : "DeAnnRose2.gif",
+        "department" : "Administration",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Lauren",
+        "lname" : "Hawthorne",
+        "email" : "lauren.hawthorne@utdallas.edu",
+        "phone" : "972-883-2960",
+        "title" : "Administrative Assistant II",
+        "image" : "lauren.gif",
+        "department" : "Administration",
+        "profile" : "",
+        "schools" : []
+    }, {
+	 "fname" : "Misty",
+        "lname" : "Hawley",
+        "email" : "misty.hawley@utdallas.edu",
+        "phone" : "972-883-4951",
+        "title" : "Communications Manager",
+        "image" : "misty.png",
+        "department" : "Administration",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Dr.Thomas",
+        "lname" : "Allen",
+        "email" : "thomas.allen1@utdallas.edu",
+        "phone" : "972-883-2573",
+        "title" : "Curator",
+        "image" : "thomasallen.gif",
+        "department" : "Special Collections and Archives",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Patrizia",
+        "lname" : "Nava, CA",
+        "email" : "patrizia.nava@utdallas.edu",
+        "phone" : "972-883-2577",
+        "title" : "Curator",
+        "image" : "Patrizia.gif",
+        "department" : "Special Collections and Archives",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "BobbyeJo",
+        "lname" : "Crouch",
+        "email" : "bobbyejo.crouch@utdallas.edu",
+        "phone" : "972-883-2570",
+        "title" : "Curator - Chance Vought",
+        "image" : "bobbye.gif",
+        "department" : "Special Collections and Archives",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Ty",
+        "lname" : "Lovelady",
+        "email" : "ty.lovelady@utdallas.edu",
+        "phone" : "972 883-2110",
+        "title" : "University Archives Curator",
+        "image" : "TY.png",
+        "department" : "Special Collections and Archives",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Seth",
+        "lname" : "Miskimmins",
+        "email" : "sxm120230@utdallas.edu",
+        "phone" : "",
+        "title" : "Philatelic Librarian, <br/>Library Assistant III",
+        "image" : "Seth.png",
+        "department" : "Special Collections and Archives",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Jesse",
+        "lname" : "Davis",
+        "email" : "jed083000@utdallas.edu",
+        "phone" : "972-883-4911",
+        "title" : "Library Computer Equipment Technician I",
+        "image" : "jesse.gif",
+        "department" : "Software/Computers Support",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Kristen",
+        "lname" : "Palmiere",
+        "email" : "kxp125430@utdallas.edu",
+        "phone" : "972-883-2593",
+        "title" : "Head of Access and Delivery Services,<br/>Senior Librarian",
+        "image" : "KristenP.gif",
+        "department" : "Access and Delivery Services",
+        "depsupervisor" : 1,
+        "profile" : "",
+        "schools" : [{
+            "school" : "",
+            "subjects" : [[
+            "",
+            ""
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Paula",
+        "lname" : "Perkins",
+        "email" : "pxp123830@utdallas.edu",
+        "phone" : "972-883-2624",
+        "title" : "Assistant Head of Access and Delivery Service and Multimedia Supervisor,<br/>Library Assistant IV ",
+        "image" : "Paula.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+	
+        "schools" : []
+    }, {
+        "fname" : "Alexander",
+        "lname" : "Rodriguez",
+        "email" : "axr124831@utdallas.edu",
+        "phone" : "972-883-2999",
+        "title" : "Reference Librarian, <br/>Liaison to the School of Management ",
+        "image" : "AlexR.gif",
+        "department" : "Reference Services",
+        "profile" : "http://libguides.utdallas.edu/AlexanderRodriguez",
+        "schools" : [{
+            "school" : "Naveen Jindal School of Management",
+            "subjects" : [[
+            "Accounting",
+            "http://libguides.utdallas.edu/content.php?pid=18636"
+            ], [
+            "Business Communications",
+            "http://libguides.utdallas.edu/BA3311"
+            ], [
+            "Business Plans and Proposals",
+            "http://libguides.utdallas.edu/BusinessPlans"
+            ], [
+            "Corporations Politics & Society",
+            "http://libguides.utdallas.edu/content.php?pid=38204"
+            ], [
+            "Entrepreneurship Resources",
+            "http://libguides.utdallas.edu/Entrepreneurship"
+            ], [
+            "Finance",
+            "http://libguides.utdallas.edu/finance"
+            ], [
+            "International Marketing",
+            "http://libguides.utdallas.edu/BA3374"
+            ], [
+            "Management",
+            "http://libguides.utdallas.edu/management"
+            ], [
+            "Organizational Behavior",
+            "http://libguides.utdallas.edu/organization"
+            ], [
+            "Public Communication",
+            "http://libguides.utdallas.edu/AMS3314"
+            ], [
+            "Strategic Management",
+            "http://libguides.utdallas.edu/BA4305"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Matthew",
+        "lname" : "Young",
+        "email" : "mjy130230@utdallas.edu",
+        "phone" : "972-883-2958",
+        "title" : "Access and Delivery Service/Copy Center/Student Worker Supervisor,<br/>Library Assistant IV",
+        "image" : "matt.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    },{
+        "fname" : "Teri",
+        "lname" : "Rogers",
+        "email" : "tar130130@utdallas.edu",
+        "phone" : "972-883-2959",
+        "title" : "Access and Delivery Service Evening Supervisor,<br/>Library Assistant IV",
+        "image" : "teri.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    },{
+        "fname" : "Eleanor",
+        "lname" : "Purcell",
+        "email" : "ejp140030@utdallas.edu",
+        "phone" : "972-883-2953",
+        "title" : "Access and Delivery Service,<br/>Library Assistant III",
+        "image" : "Purcell.png",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    },{
+        "fname" : "Donna",
+        "lname" : "Ammeter",
+        "email" : "dsa130030@utdallas.edu",
+        "phone" : "972-883-2953",
+        "title" : "Access and Delivery Service,<br/>Library Assistant III",
+        "image" : "donna.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    },{
+        "fname" : "Doug",
+        "lname" : "Boedenauer",
+        "email" : "Douglas.Boedenauer@utdallas.edu",
+        "phone" : "972-883-2953",
+        "title" : "Access and Delivery Service,<br/>Library Assistant III",
+        "image" : "doug.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    },{
+        "fname" : "Kathryn",
+        "lname" : "Zlotnik",
+        "email" : "kez081000@utdallas.edu",
+        "phone" : "972-883-2953",
+        "title" : "Access and Delivery Service,<br/>Library Assistant III",
+        "image" : "zlotnik.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    },{
+        "fname" : "Regina",
+        "lname" : "Burns",
+        "email" : "rsb120030@utdallas.edu",
+        "phone" : "972-883-2953",
+        "title" : "Access and Delivery Service,<br/>Library Assistant III",
+        "image" : "Regina.png",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Jay",
+        "lname" : "McAllister",
+        "email" : "jtm140230@utdallas.edu",
+        "phone" : "972-883-2953",
+        "title" : "Access and Delivery Service,<br/>Library Assistant III",
+        "image" : "JayMcAllister.png",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Mirsad",
+        "lname" : "Dautovic",
+        "email" : "mxd101000@utdallas.edu",
+        "phone" : "972-883-2953",
+        "title" : "Stacks Maintenance,<br/>Library Assistant III",
+        "image" : "mirsad.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Susan",
+        "lname" : "Fisher ",
+        "email" : "sjf091000@utdallas.edu",
+        "phone" : "972-883-6774",
+        "title" : "Access and Delivery Service/Cashier, <br/>Library Assistant III",
+        "image" : "susan.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    },{
+        "fname" : "Carly",
+        "lname" : "Mitchell",
+        "email" : "cam101000@utdallas.edu",
+        "phone" : "972-883-2956",
+        "title" : "Head of Stacks Maintenance,<br/>Library Assistant IV",
+        "image" : "carly.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Slavko",
+        "lname" : "Ravlija",
+        "email" : "sxr099000@utdallas.edu",
+        "phone" : "972-883-2866",
+        "title" : "Multimedia,<br/>Library Assistant III",
+        "image" : "slavko.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : []
+    }, {
+        "fname" : "Sharon",
+        "lname" : "Tadlock",
+        "email" : "sxt063000@utdallas.edu",
+        "phone" : "972-883-2871",
+        "title" : "Interlibrary Loan, <br/>Library Assistant III",
+        "image" : "SharonT.png",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : [{
+            "school" : "",
+            "subjects" : [[
+            "Interlibrary Loan website",
+            "http://www.utdallas.edu/library/services/ill/index.html"
+            ]
+            ]
+        }
+        ]
+    }, {
+        "fname" : "Sheila",
+        "lname" : "Blankenship",
+        "email" : "sheila@utdallas.edu",
+        "phone" : "972-883-2871",
+        "title" : "Interlibrary Loan, <br/>Library Assistant III",
+        "image" : "sheila.gif",
+        "department" : "Access and Delivery Services",
+        "profile" : "",
+        "schools" : [{
+            "school" : "",
+            "subjects" : [[
+            "Interlibrary Loan website",
+            "http://www.utdallas.edu/library/services/ill/index.html"
+            ]
+            ]
+        }
+        ]
+    }
+    ]
+}
