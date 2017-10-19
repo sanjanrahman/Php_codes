@@ -1,4 +1,5 @@
 <?php
+//Php part of department contact inforamtion
 //Read the data in memory.
 $str_data = file_get_contents("contacts.json");
 $data = json_decode($str_data, true);
